@@ -1,0 +1,95 @@
+body {
+  background: #fff;
+}
+.product {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px dashed #ccc;
+}
+.product.heading {
+  background: #f2f2f2;
+  padding: 5px 20px;
+}
+.product.heading span {
+  border: none;
+}
+.product span,
+.product input {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 14px;
+  min-width: 80px;
+}
+.product span:not(:focus),
+.product input:not(:focus) {
+  border-left: 1px dashed #ccc;
+}
+.product span:first-child,
+.product input:first-child {
+  border-color: transparent;
+}
+.product span:first-child:focus,
+.product input:first-child:focus {
+  border-color: #66afe9;
+}
+.product span:hover + input:not(:focus),
+.product input:hover + input:not(:focus),
+.product span:focus + input,
+.product input:focus + input {
+  border-color: transparent;
+}
+.product span.center,
+.product input.center {
+  text-align: center;
+}
+.product .info {
+  display: inline-block;
+  width: calc(100% - 200px);
+}
+.product .info .name {
+  width: 200px;
+}
+.product .info .cost,
+.product .info .price {
+  width: 60px;
+}
+.product .info .description {
+  width: 200px;
+}
+.product .controls {
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}
+.product .controls .count {
+  width: 60px;
+  border: 1px solid transparent;
+}
+.product .controls button {
+  vertical-align: top;
+  margin-left: 13px;
+}
+.product#new input {
+  border: 1px solid #ccc;
+  min-width: 70px;
+  margin-right: 10px;
+}
+.product#new input.name {
+  width: 195px;
+}
+.product#new input:hover {
+  border: 1px solid #ccc;
+}
+.product#new input:focus {
+  border-color: #66afe9;
+}
+.form-control {
+  background: none;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.form-control:hover:not(:focus) {
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}

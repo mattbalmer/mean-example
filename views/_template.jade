@@ -1,0 +1,11 @@
+include includes/mixins
+doctype html
+html(ng-app='MEAN')
+    head
+        include includes/imports
+        title= 'MEAN Sample'
+    body!= body
+        include _header
+
+        .container#content
+            block content

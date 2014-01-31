@@ -1,0 +1,85 @@
+body
+    background #fff
+
+.product
+    width 100%
+    padding 20px
+    box-sizing border-box
+    border-bottom 1px dashed #ccc
+
+    &.heading
+        background #f2f2f2
+        padding 5px 20px
+
+        span
+            border none
+
+    span, input
+        display inline-block
+        padding 0 15px
+        font-size 14px
+        min-width 80px
+
+        &:not(:focus)
+            border-left 1px dashed #ccc
+
+        &:first-child
+            border-color transparent
+
+            &:focus
+                border-color #66AFE9
+
+        &:hover + input:not(:focus), &:focus + input
+            border-color transparent
+
+        &.center
+            text-align center
+
+    .info
+        display inline-block
+        width calc(100% - 200px)
+
+        .name
+            width 200px
+
+        .cost, .price
+            width 60px
+
+        .description
+            width 200px
+
+    .controls
+        display inline-block
+        width 200px
+        text-align right
+
+        .count
+            width 60px
+            border 1px solid transparent
+
+        button
+            vertical-align top
+            margin-left 13px
+
+    &#new input
+        border 1px solid #ccc
+        min-width 70px
+        margin-right 10px
+
+        &.name
+            width 195px
+
+        &:hover
+            border 1px solid #CCC
+
+        &:focus
+            border-color #66AFE9
+
+.form-control
+    background none
+    border 1px solid transparent
+    box-shadow none
+
+    &:hover:not(:focus)
+        border 1px solid #CCC
+        box-shadow inset 0 1px 1px rgba(#000, 0.075)

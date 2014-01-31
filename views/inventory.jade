@@ -1,0 +1,32 @@
+extends _template
+block append imports
+    link(rel='stylesheet', href='/css/inventory.css')
+    script(src='/vendor/js/angular-cookies.js')
+    script(src='/ng/controllers/inventory.js')
+    script(src='/ng/directives/product.js')
+
+block content
+    section.inventory
+        section.controls
+        section.listing(ng-controller="Inventory")
+            .heading.product
+                .info
+                    span.name Name
+                    span.cost.center Cost
+                    span.price.center Price
+                    span.description Description
+                .controls
+                    span.count.center Count
+                    span.delete Delete
+
+            .product(ng-repeat="product in inventory", product='product')
+
+            #new.product
+                .info
+                    input.form-control.name(ng-model="newProduct.name")
+                    input.form-control.cost.center(ng-model="newProduct.cost")
+                    input.form-control.price.center(ng-model="newProduct.price")
+                    input.form-control.description(ng-model="newProduct.description")
+                .controls
+                    input.form-control.count.center(ng-model="newProduct.count")
+                    button.btn.btn-primary(ng-click="add()") Add
